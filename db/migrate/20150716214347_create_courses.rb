@@ -5,7 +5,7 @@ class CreateCourses < ActiveRecord::Migration
       t.string :category
       t.string :city_name
       t.text :description
-      t.references :user
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end
