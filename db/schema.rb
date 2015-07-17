@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20150716220356) do
     t.datetime "updated_at",  null: false
   end
 
+  add_index "courses", ["user_id"], name: "index_courses_on_user_id"
+
   create_table "events", force: :cascade do |t|
     t.datetime "start_time"
     t.datetime "end_time"
@@ -49,8 +51,9 @@ ActiveRecord::Schema.define(version: 20150716220356) do
     t.string   "email"
     t.text     "description"
     t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
