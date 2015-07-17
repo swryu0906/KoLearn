@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 	    flash[:notice] = "You logged in successfully."
 	    redirect_to '/'
 	  else
-	  	flash[:notice] = "You failed to log in! Please, log in again."
+	  	flash[:notice] = "You failed to log in. Please try again."
 	    redirect_to '/login'
 	  end
 	end

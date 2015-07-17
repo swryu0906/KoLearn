@@ -1,13 +1,13 @@
-<div id="notice">
-	<p><%= flash[:notice] %></p> 
-</div>
-
 <div class="container">
-	<div class="login">
+	<div class="user-input">
 		<h1>Log in</h1>
 	</div>
 
 	<div class="login-form">
+		<div id="notice">
+			<p><%= flash[:notice] %></p> 
+		</div>
+		
 		<%= render 'form' %>
 	</div>
 
