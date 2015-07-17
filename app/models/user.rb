@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 	has_many :events, through: :joins, dependent: :destroy
 
 
-	validates_presence_of :first_name, :last_name
+	validates_presence_of :first_name, :last_name, :email
 	validates_length_of :password, minimum: 4
 
 	after_save :signup_welcome_notification
