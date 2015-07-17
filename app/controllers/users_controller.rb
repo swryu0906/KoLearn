@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "Congratulation, you have created a new acount successfully!"
+      flash[:notice] = "Congratulations, you have created a new acount successfully!"
       redirect_to '/'
     else
       flash[:notice] = "Error, you failed to create a new account!"
