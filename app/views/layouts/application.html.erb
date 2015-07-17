@@ -8,6 +8,29 @@
 </head>
 <body>
 
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+       <!-- <%= link_to image_tag("https://goo.gl/Zuwik9", :border => 0), {:action => 'welcome', :controller => 'pages'} %> -->
+      </div>
+      <div class="col-md-3">
+        <% if current_user %>
+          <ul>
+            <li>Welcome, <%= current_user.first_name %></li>
+            <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+            <% else %>
+          </ul>
+          <ul>
+            <li><%= link_to "Log in", '/login' %></li>
+            <li><%= link_to "Sign Up", '/signup' %></li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
 <%= yield %>
 
 </body>
