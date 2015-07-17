@@ -14,3 +14,6 @@
  *= require_self
  */
 
+img {
+  height: 40px;
+}
