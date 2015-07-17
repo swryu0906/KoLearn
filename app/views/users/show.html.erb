@@ -1,13 +1,13 @@
-<p id="notice"><%= notice %></p>
+<%= render 'notice' %>
 
 <p>
   <strong>First name:</strong>
-  <%= @user.first_name %>
+  <%= @user.first_name.titleize %>
 </p>
 
 <p>
   <strong>Last name:</strong>
-  <%= @user.last_name %>
+  <%= @user.last_name.titleize %>
 </p>
 
 <p>

@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<%= render 'notice' %>
 
 <h1>Listing Users</h1>
 
@@ -17,8 +17,8 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
+        <td><%= user.first_name.titleize %></td>
+        <td><%= user.last_name.titleize %></td>
         <td><%= user.email %></td>
         <td><%= user.description %></td>
         <td><%= user.image %></td>

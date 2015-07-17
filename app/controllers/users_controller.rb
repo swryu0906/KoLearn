@@ -31,6 +31,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Congratulation, you have created a new acount successfully!"
       redirect_to '/'
     else
+      flash[:notice] = "Error, you failed to create a new account!"
       redirect_to '/signup'
     end
 
@@ -77,6 +78,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :description, :image, :password)
+      params.require(:user).permit(:first_name, :last_name, :email, :description, :image, :password, :password_confirmation)
     end
 end
