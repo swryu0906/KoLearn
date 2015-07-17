@@ -12,35 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, :placeholder => "First Name", :class => "form-control"  %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, :placeholder => "Last Name", :class => "form-control"  %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.email_field :email %>
+    <%= f.email_field :email, :placeholder => "Email Address", :class => "form-control"  %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, :placeholder => "Enter Password", :class => "form-control"  %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Password confirmation" %><br>
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, :placeholder => "Enter Password Again", :class => "form-control"  %>
   </div>
 
   <div class="field">
-    <%= f.label :description, "Description (optional)" %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :placeholder => "Tell me about yourself!", :class => "form-control"  %>
   </div>
   <div class="field">
-    <%= f.label :image, "Image (optional)" %><br>
-    <%= f.text_field :image, :placeholder => "" %>
+    <%= f.text_field :image, :placeholder => "", :class => "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Sign up", class: "btn-login" %>
   </div>
 <% end %>
